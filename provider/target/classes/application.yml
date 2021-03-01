@@ -1,0 +1,54 @@
+dubbo:
+  application:
+    #当前服务名称
+    name: user-service-provider
+  #通信规则
+  protocol:
+    name: dubbo
+    port: 20880
+    #注册中心的协议和地址
+  registry:
+    protocol: zookeeper
+    address: 49.235.91.141:2181
+  provider:
+    loadbalance: random
+  consumer:
+    loadbalance: random
+    cluster: failover
+spring:
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirms: true
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
+  redis:
+#    host: 127.0.0.1
+#    database: 0
+#    port: 6379
+    jedis:
+      pool:
+        max-active: 50
+        max-wait: 5000
+    timeout: 5000
+    cluster:
+      nodes: 49.235.91.141:6374,49.235.91.141:6375,49.235.91.141:6376,49.235.91.141:6377,49.235.91.141:6378,49.235.91.141:6379
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test1?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  aop:
+    proxy-target-class: true
+
+server:
+  port: 8090
+
