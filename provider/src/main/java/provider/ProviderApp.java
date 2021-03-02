@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * @ClassName ProviderApp
- * @Description: TODO
+ * @Description:
  * @Author lirui
  * @Date 2020/3/10
  * @Version V1.0
