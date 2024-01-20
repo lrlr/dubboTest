@@ -1,6 +1,7 @@
 package customer.service;
 
-import java.util.ArrayList;
+import javax.swing.*;
+import java.io.UnsupportedEncodingException;
 
 /**
  * @ClassName Test
@@ -10,17 +11,8 @@ import java.util.ArrayList;
  * @Version V1.0
 **/
 public class Test {
-    public static void main(String[] args) {
-        ArrayList<String> list=new ArrayList<>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("7");
-        ArrayList<String> list1=new ArrayList<>();
-        list1.add("1");
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        new Cardioid().run();
 
-
-        list1.add("7");
-        list.removeAll(list1);
     }
 }

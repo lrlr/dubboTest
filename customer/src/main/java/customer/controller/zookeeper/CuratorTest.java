@@ -23,7 +23,7 @@ import java.util.List;
 public class CuratorTest {
     public static void main(String[] args) throws Exception {
         CuratorFramework curatorFramework = CuratorFrameworkFactory.builder()
-                .connectString("49.235.91.141:2181"). //连接地址
+                .connectString("127.0.0.1:2181"). //连接地址
                 sessionTimeoutMs(15000).  // 连接超时时间
                 retryPolicy(new ExponentialBackoffRetry(1000, 1)). // 设置重试策略，
                 build();

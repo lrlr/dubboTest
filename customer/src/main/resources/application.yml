@@ -10,7 +10,7 @@ dubbo:
    #注册中心的协议和地址
   registry:
     protocol: zookeeper
-    address: 49.235.91.141:2181
+    address: 127.0.0.1:2181
     timeout: 15000
   monitor:
     address: dubbo://                                                                                                                                    /com.alibaba.dubbo.monitor.MonitorService
@@ -21,12 +21,12 @@ spring:
   rabbitmq:
     host: 127.0.0.1
     port: 5672
-    username: guest
-    password: guest
+    username: 630240701
+    password: 630240701
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test1?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
     username: root
-    password: 123456
+    password: 630240701
     driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
       hibernate:

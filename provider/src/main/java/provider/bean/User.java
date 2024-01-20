@@ -9,7 +9,7 @@ import javax.persistence.*;
  * @date 2020/6/3 10:07
  */
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
     public User() {
 
